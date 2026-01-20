@@ -1,0 +1,82 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-home",
+      "description": "A beautiful, clean modern home exterior, representing a pest-free living space.",
+      "imageUrl": "https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBob3VzZXxlbnwwfHx8fDE3Njg4NTg5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern house"
+    },
+    {
+      "id": "why-choose-us",
+      "description": "A friendly family enjoying their clean, pest-free home.",
+      "imageUrl": "https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYXBweSUyMGZhbWlseXxlbnwwfHx8fDE3Njg4OTkzMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy family"
+    },
+    {
+      "id": "service-wildlife",
+      "description": "A silhouette of a forest at dusk, representing wildlife.",
+      "imageUrl": "https://images.unsplash.com/photo-1644587799880-7cf02331843e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Zm9yZXN0JTIwc2lsaG91ZXR0ZXxlbnwwfHx8fDE3Njg4NzU0OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "forest silhouette"
+    },
+    {
+      "id": "service-pests",
+      "description": "A macro shot of a green leaf with water droplets, representing eco-friendly pest solutions.",
+      "imageUrl": "https://images.unsplash.com/photo-1716404249660-1cc568f4a483?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsZWFmJTIwbWFjcm98ZW58MHx8fHwxNzY4OTIzOTE1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leaf macro"
+    },
+    {
+      "id": "avatar-1",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1590086782792-42dd2350140d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg4NzU1MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzY4ODU2MTAwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "avatar-3",
+      "description": "Avatar for a customer testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njg4OTA1NjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "hero-wildlife",
+      "description": "A raccoon peeking out from a tree, representing wildlife.",
+      "imageUrl": "https://images.unsplash.com/photo-1601247387431-7966d811f30b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyYWNjb29ufGVufDB8fHx8MTc2ODkzODUxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raccoon"
+    },
+    {
+      "id": "hero-pests",
+      "description": "Close-up of ants on a branch.",
+      "imageUrl": "https://images.unsplash.com/photo-1641907083047-d3cfb1582f5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhbnRzfGVufDB8fHx8MTc2ODkzODUxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ants"
+    },
+    {
+      "id": "hero-about",
+      "description": "A team of two friendly pest control technicians smiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1680721698104-5fff20073eee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmcmllbmRseSUyMHRlYW18ZW58MHx8fHwxNzY4OTM4NTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "friendly team"
+    },
+    {
+      "id": "hero-contact",
+      "description": "A person's hand holding a phone, ready to make a call.",
+      "imageUrl": "https://images.unsplash.com/photo-1529653762956-b0a27278529c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxob2xkaW5nJTIwcGhvbmV8ZW58MHx8fHwxNzY4OTM4NTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "holding phone"
+    },
+    {
+      "id": "hero-reviews",
+      "description": "A wall with thank you notes.",
+      "imageUrl": "https://images.unsplash.com/photo-1503980599186-9cc36eda351a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGhhbmslMjB5b3V8ZW58MHx8fHwxNzY4OTM4NTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "thank you"
+    },
+    {
+      "id": "hero-faq",
+      "description": "A person looking thoughtful with question marks around.",
+      "imageUrl": "https://images.unsplash.com/photo-1724120932024-07984b247ff1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxxdWVzdGlvbiUyMG1hcmtzfGVufDB8fHx8MTc2ODkzODUxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "question marks"
+    }
+  ]
+}
