@@ -37,18 +37,9 @@ export default function RootLayout({
     '@type': 'LocalBusiness',
     name: COMPANY_NAME,
     telephone: PHONE_NUMBER,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Main St',
-      addressLocality: 'Your City',
-      addressRegion: 'ST',
-      postalCode: '12345',
-      addressCountry: 'US',
-    },
     description:
       'Eco-friendly pest and wildlife control services. We are a local, family-owned business focused on customer-first service and affordable pricing.',
     openingHours: 'Mo-Sa 08:00-18:00',
-    url: 'https://your-website.com', // Replace with actual URL
   };
 
   return (

@@ -104,14 +104,12 @@ export function Footer() {
             © {currentYear} {COMPANY_NAME}. All Rights Reserved.
           </p>
           <p className="text-xs leading-relaxed text-muted-foreground/90">
-            Disclaimer: greenshield.com is a free service to assist homeowners
-            in connecting with local service providers. All
-            contractors/providers are independent and greenshield.com does not
-            warrant or guarantee any work performed. It is the responsibility of
-            the homeowner to verify that the hired contractor furnishes the
-            necessary license and insurance required for the work being
-            performed. All persons depicted in a photo or video are actors or
-            models and not contractors listed on this site
+            Disclaimer: This website is a service to assist homeowners in connecting with local
+            service providers. All contractors/providers are independent and the website operator
+            does not warrant or guarantee any work performed. It is the responsibility of the
+            homeowner to verify that the hired contractor furnishes the necessary license and
+            insurance required for the work being performed. All persons depicted in a photo or
+            video are actors or models and not contractors listed on this site.
           </p>
         </div>
       </div>
