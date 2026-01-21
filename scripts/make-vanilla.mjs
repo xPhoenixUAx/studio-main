@@ -54,15 +54,89 @@ function stripNextRuntimeScripts(html) {
   return html;
 }
 
+function stripHtmlComments(html) {
+  return html.replaceAll(/<!--[\s\S]*?-->/g, '');
+}
+
+function formatHtml(html) {
+  // Preserve <script> blocks (JSON can be mangled by naive formatting).
+  const preserved = [];
+  html = html.replaceAll(/<script\b[\s\S]*?<\/script>/gi, (block) => {
+    const id = preserved.length;
+    preserved.push(block);
+    return `\n___PRESERVE_SCRIPT_${id}___\n`;
+  });
+
+  html = html
+    .replaceAll(/\s+\n/g, '\n')
+    .replaceAll(/\n\s+/g, '\n')
+    .replaceAll(/>\s*</g, '>\n<')
+    .trim();
+
+  const voidTags = new Set([
+    'area',
+    'base',
+    'br',
+    'col',
+    'embed',
+    'hr',
+    'img',
+    'input',
+    'link',
+    'meta',
+    'param',
+    'source',
+    'track',
+    'wbr',
+  ]);
+
+  const lines = html.split('\n');
+  let indent = 0;
+  const out = [];
+
+  for (let line of lines) {
+    const trimmed = line.trim();
+    if (trimmed.length === 0) continue;
+
+    if (/^<\/[a-zA-Z]/.test(trimmed)) {
+      indent = Math.max(0, indent - 1);
+    }
+
+    out.push(`${'  '.repeat(indent)}${trimmed}`);
+
+    const openMatch = trimmed.match(/^<([a-zA-Z0-9-]+)/);
+    const isOpening = openMatch && !/^<\//.test(trimmed) && !/\/>$/.test(trimmed);
+    const isDoctype = /^<!DOCTYPE/i.test(trimmed);
+    const isPreserved = /^___PRESERVE_SCRIPT_\d+___$/.test(trimmed);
+    const isComment = /^<!--/.test(trimmed);
+
+    if (
+      isOpening &&
+      !isDoctype &&
+      !isComment &&
+      !isPreserved &&
+      openMatch &&
+      !voidTags.has(openMatch[1].toLowerCase()) &&
+      !/<\/[a-zA-Z]/.test(trimmed)
+    ) {
+      indent += 1;
+    }
+  }
+
+  let formatted = out.join('\n');
+  formatted = formatted.replaceAll(/___PRESERVE_SCRIPT_(\d+)___/g, (_m, n) => preserved[Number(n)]);
+  return `${formatted}\n`;
+}
+
 function injectAssets(html, depth) {
   const assetRel = getAssetRel(depth);
   const tag = [
     `<link rel="stylesheet" href="${assetRel}styles.css">`,
     `<script defer src="${assetRel}app.js"></script>`,
-  ].join('');
+  ].join('\n');
 
   if (html.includes('</head>')) {
-    return html.replace('</head>', `${tag}</head>`);
+    return html.replace('</head>', `${tag}\n</head>`);
   }
   return `${tag}${html}`;
 }
@@ -351,6 +425,7 @@ async function main() {
 
     let html = await fs.readFile(inPath, 'utf8');
     html = stripNextRuntimeScripts(html);
+    html = stripHtmlComments(html);
 
     // Remove Next stylesheet tag (we'll add ours).
     html = html.replaceAll(/<link\b[^>]*rel=["']stylesheet["'][^>]*>\s*/gi, '');
@@ -368,6 +443,7 @@ async function main() {
       html = patchContactPage(html, route.depth);
     }
 
+    html = formatHtml(html);
     await fs.writeFile(outPath, html, 'utf8');
   }
 
@@ -375,4 +451,3 @@ async function main() {
 }
 
 await main();
-
