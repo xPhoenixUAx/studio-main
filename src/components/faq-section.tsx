@@ -27,9 +27,9 @@ export function FaqSection() {
   const faqsByTopic: Record<string, FaqItem[]> = {
     general: [
       {
-        question: 'Do you offer free inspections?',
+        question: 'Do you offer inspections?',
         answer:
-          'Yes. We offer a free initial inspection to understand the issue, identify entry points, and recommend the right plan.',
+          'Yes. We start with an initial inspection to understand the issue, identify entry points, and recommend the right plan.',
       },
       {
         question: 'Are your treatments safe for kids and pets?',

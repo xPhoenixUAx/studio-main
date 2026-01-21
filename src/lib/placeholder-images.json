@@ -2,13 +2,13 @@
   "placeholderImages": [
     {
       "id": "hero-home",
-      "description": "A beautiful, clean modern home exterior, representing a pest-free living space.",
+      "description": "A beautiful, clean modern home exterior, representing a pest-protected living space.",
       "imageUrl": "https://images.unsplash.com/photo-1721815693498-cc28507c0ba2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBob3VzZXxlbnwwfHx8fDE3Njg4NTg5NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern house"
     },
     {
       "id": "why-choose-us",
-      "description": "A friendly family enjoying their clean, pest-free home.",
+      "description": "A friendly family enjoying their clean, pest-protected home.",
       "imageUrl": "https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxoYXBweSUyMGZhbWlseXxlbnwwfHx8fDE3Njg4OTkzMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "happy family"
     },

@@ -117,7 +117,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="font-bold">
                 <Link href="/contact">
-                  Get a Free Inspection <ArrowRight className="ml-2 h-5 w-5" />
+                  Schedule an Inspection <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
@@ -315,7 +315,7 @@ export default function Home() {
             Ready to Reclaim Your Home?
           </h2>
           <p className="max-w-[600px] mx-auto text-primary-foreground/80">
-            Don't let pests take over. Contact us today for a free, no-obligation
+            Don't let pests take over. Contact us today for a no-obligation
             inspection and quote.
           </p>
           <Button
@@ -326,7 +326,7 @@ export default function Home() {
           >
             <Link href="/contact">
               <Phone className="mr-2 h-5 w-5" />
-              Get Your Free Inspection
+              Book an Inspection
             </Link>
           </Button>
         </div>

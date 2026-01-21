@@ -120,13 +120,13 @@ export function ReviewsList({ reviews }: { reviews: Review[] }) {
             <div>
               <p className="font-semibold">Want results like these?</p>
               <p className="text-sm text-muted-foreground mt-1">
-                Book a free inspection and get a clear plan for your home.
+                Book an inspection and get a clear plan for your home.
               </p>
             </div>
           </div>
           <Button asChild className="font-bold">
             <Link href="/contact">
-              Schedule a Free Inspection <ShieldCheck className="ml-2 h-4 w-4" />
+              Schedule an Inspection <ShieldCheck className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </CardContent>

@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { MobileCallBar } from '@/components/layout/mobile-call-bar';
+import { CookieBanner } from '@/components/cookie-banner';
 import { COMPANY_NAME, PHONE_NUMBER } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s | ${COMPANY_NAME}`,
   },
   description:
-    'Your trusted local, family-owned pest and wildlife control service. We offer affordable, eco-friendly solutions with visible results. Contact us for a free inspection!',
+    'Your trusted local, family-owned pest and wildlife control service. We offer affordable, eco-friendly solutions with visible results. Contact us to schedule an inspection.',
   keywords: [
     'pest control',
     'wildlife removal',
@@ -73,6 +74,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <MobileCallBar />
+        <CookieBanner />
         <Toaster />
       </body>
     </html>

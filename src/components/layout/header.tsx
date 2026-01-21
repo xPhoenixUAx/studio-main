@@ -54,7 +54,7 @@ export function Header() {
             {PHONE_NUMBER}
           </a>
           <Button asChild className="hidden md:inline-flex">
-            <Link href="/contact">Free Inspection</Link>
+            <Link href="/contact">Book Inspection</Link>
           </Button>
           <Button asChild className="md:hidden" size="sm">
             <a href={PHONE_NUMBER_HREF}>

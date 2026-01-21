@@ -13,7 +13,6 @@ import type { Metadata } from 'next';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { REVIEWS, COMPANY_NAME } from '@/lib/constants';
 import { ReviewsList } from '@/app/reviews/reviews-list';
 import { cn } from '@/lib/utils';
@@ -24,10 +23,6 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewsPage() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-reviews');
-  const bannerImage =
-    PlaceHolderImages.find((img) => img.id === 'why-choose-us') ?? heroImage;
-
   const avgRating = 4.75;
 
   const highlightCards = [
@@ -51,16 +46,13 @@ export default function ReviewsPage() {
   return (
     <div className="flex flex-col">
       <section className="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 bg-secondary">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
+        <Image
+          src="/images/reviews/head-rewiev.jpg"
+          alt="Reviews page header background."
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container relative px-4 md:px-6 text-center text-white space-y-4">
           <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl">
@@ -93,16 +85,14 @@ export default function ReviewsPage() {
               <div className="lg:col-span-4 lg:sticky lg:top-24 space-y-4">
                 <Card className="overflow-hidden">
                   <div className="relative aspect-[16/7]">
-                    {bannerImage && (
-                      <Image
-                        src={bannerImage.imageUrl}
-                        alt={bannerImage.description}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 35vw"
-                        data-ai-hint={bannerImage.imageHint}
-                      />
-                    )}
+                    <Image
+                      src="/images/reviews/719.jpg"
+                      alt="Happy customers and positive reviews."
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 35vw"
+                      priority
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                     <div className="absolute left-4 top-4">
                       <Badge variant="secondary" className="gap-2">
@@ -159,7 +149,7 @@ export default function ReviewsPage() {
 
                     <Button asChild size="lg" className="w-full font-bold">
                       <Link href="/contact">
-                        Schedule a Free Inspection <PhoneCall className="ml-2 h-5 w-5" />
+                        Schedule an Inspection <PhoneCall className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>
                   </CardContent>

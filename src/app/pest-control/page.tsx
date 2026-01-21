@@ -234,11 +234,11 @@ export default function PestControlPage() {
             Reliable Pest Control
           </h1>
           <p className="max-w-[700px] mx-auto text-lg md:text-xl drop-shadow">
-            Customized, eco-friendly solutions for a pest-free home.
+            Customized, eco-friendly solutions for a pest-protected home.
           </p>
           <Button asChild size="lg" className="font-bold">
             <Link href="/contact">
-              Get Your Free Estimate <ArrowRight className="ml-2 h-5 w-5" />
+              Request an Estimate <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>
@@ -505,7 +505,7 @@ export default function PestControlPage() {
                                       className="w-full font-bold"
                                     >
                                       <Link href="/contact">
-                                        Get a Free Estimate{" "}
+                                        Request an Estimate{" "}
                                         <ArrowRight className="ml-2 h-4 w-4" />
                                       </Link>
                                     </Button>

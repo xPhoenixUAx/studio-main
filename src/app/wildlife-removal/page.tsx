@@ -169,7 +169,7 @@ export default function WildlifeRemovalPage() {
           </p>
           <Button asChild size="lg" className="font-bold">
             <Link href="/contact">
-              Schedule Your Free Inspection{" "}
+              Schedule an Inspection{" "}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
@@ -182,7 +182,7 @@ export default function WildlifeRemovalPage() {
               <div className="relative overflow-hidden rounded-2xl border bg-secondary shadow-xl">
                 <div className="relative aspect-[4/5]">
                   <Image
-                    src="/images/wildlife/house.jpg"
+                    src="/images/wildlife/forest.jpg"
                     alt="Forest background for wildlife removal services."
                     fill
                     className="object-cover"
@@ -271,13 +271,13 @@ export default function WildlifeRemovalPage() {
                     <div className="space-y-1">
                       <p className="font-semibold">Not sure what you saw?</p>
                       <p className="text-sm text-muted-foreground">
-                        Describe it during your free inspection-our team will
+                        Describe it during your inspection-our team will
                         identify the issue and the entry points.
                       </p>
                     </div>
                     <Button asChild className="font-bold">
                       <Link href="/contact">
-                        Get a Free Inspection{" "}
+                        Schedule an Inspection{" "}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
@@ -375,7 +375,7 @@ export default function WildlifeRemovalPage() {
                   </div>
                   <Button asChild size="lg" className="w-full font-bold">
                     <Link href="/contact">
-                      Schedule a Free Inspection{" "}
+                      Schedule an Inspection{" "}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
@@ -527,7 +527,7 @@ export default function WildlifeRemovalPage() {
 
                     <Button asChild size="lg" className="mt-6 w-full font-bold">
                       <Link href="/contact">
-                        Book a Free Inspection{" "}
+                        Book an Inspection{" "}
                         <ArrowRight className="ml-2 h-5 w-5" />
                       </Link>
                     </Button>

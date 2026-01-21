@@ -143,8 +143,8 @@ export function ContactForm() {
                     Wildlife Removal
                   </SelectItem>
                   <SelectItem value="pest-control">Pest Control</SelectItem>
-                  <SelectItem value="free-inspection">
-                    Free Inspection
+                  <SelectItem value="inspection">
+                    Inspection
                   </SelectItem>
                   <SelectItem value="other">Other</SelectItem>
                 </SelectContent>

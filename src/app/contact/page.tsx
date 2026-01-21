@@ -10,7 +10,6 @@ import {
 } from 'lucide-react';
 import type { Metadata } from 'next';
 
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { COMPANY_NAME, PHONE_NUMBER, PHONE_NUMBER_HREF, EMAIL } from '@/lib/constants';
 import { ContactForm } from '@/components/contact-form';
 import { Button } from '@/components/ui/button';
@@ -18,27 +17,20 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: `Get in touch with ${COMPANY_NAME} for a free inspection or estimate. Call us or fill out our online form to schedule your service.`,
+  description: `Get in touch with ${COMPANY_NAME} to schedule an inspection or request an estimate. Call us or fill out our online form to schedule your service.`,
 };
 
 export default function ContactPage() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-contact');
-  const contactBannerImage =
-    PlaceHolderImages.find((img) => img.id === 'hero-home') ?? heroImage;
-
   return (
     <div className="flex flex-col">
       <section className="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 bg-secondary">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
+        <Image
+          src="/images/ui/contact.jpg"
+          alt="Contact page header background."
+          fill
+          className="object-cover"
+          priority
+        />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="container relative px-4 md:px-6 text-center text-white space-y-4">
           <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl">
@@ -57,20 +49,18 @@ export default function ContactPage() {
               <Card className="overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative aspect-[16/8]">
-                    {contactBannerImage && (
-                      <Image
-                        src={contactBannerImage.imageUrl}
-                        alt={contactBannerImage.description}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1024px) 100vw, 40vw"
-                        data-ai-hint={contactBannerImage.imageHint}
-                      />
-                    )}
+                    <Image
+                      src="/images/ui/918.jpg"
+                      alt="Contact options and scheduling."
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      priority
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                     <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border bg-background/70 px-3 py-1 text-sm font-semibold backdrop-blur-sm">
                       <Sparkles className="h-4 w-4 text-primary" />
-                      Free inspection • No pressure
+                      Inspection • No pressure
                     </div>
                   </div>
 

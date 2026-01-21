@@ -1,53 +1,32 @@
-import Link from 'next/link';
+﻿import Link from "next/link";
+
 import {
   COMPANY_NAME,
+  EMAIL,
   FOOTER_LINKS,
   PHONE_NUMBER,
-  EMAIL,
-} from '@/lib/constants';
-import { Logo } from './logo';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+} from "@/lib/constants";
+import { Logo } from "./logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const combinedLinks = [...FOOTER_LINKS.services, ...FOOTER_LINKS.company];
 
   return (
     <footer className="bg-secondary border-t">
-      <div className="container py-12 px-4 md:px-6 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container py-12 px-4 md:px-6 grid gap-8 md:grid-cols-2 lg:grid-cols-4 items-start">
         <div className="space-y-4">
           <Logo />
           <p className="text-sm text-muted-foreground max-w-xs">
             Your local, family-owned experts in eco-friendly pest and wildlife
             solutions.
           </p>
-          <div className="flex gap-4">
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="text-muted-foreground hover:text-primary"
-            >
-              <Facebook className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              aria-label="Twitter"
-              className="text-muted-foreground hover:text-primary"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="text-muted-foreground hover:text-primary"
-            >
-              <Instagram className="h-5 w-5" />
-            </a>
-          </div>
         </div>
+
         <div>
-          <h3 className="font-semibold mb-4">Services</h3>
+          <h3 className="font-semibold mb-4">Services & Company</h3>
           <ul className="space-y-2">
-            {FOOTER_LINKS.services.map((link) => (
+            {combinedLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -59,21 +38,37 @@ export function Footer() {
             ))}
           </ul>
         </div>
+
         <div>
-          <h3 className="font-semibold mb-4">Company</h3>
+          <h3 className="font-semibold mb-4">Legal</h3>
           <ul className="space-y-2">
-            {FOOTER_LINKS.company.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link
+                href="/privacy-policy"
+                className="text-sm text-muted-foreground hover:text-primary"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/terms-of-service"
+                className="text-sm text-muted-foreground hover:text-primary"
+              >
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/cookie-policy"
+                className="text-sm text-muted-foreground hover:text-primary"
+              >
+                Cookie Policy
+              </Link>
+            </li>
           </ul>
         </div>
+
         <div>
           <h3 className="font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
@@ -87,17 +82,37 @@ export function Footer() {
                 {EMAIL}
               </a>
             </li>
-            <li className="pt-2">
-              <p className="font-medium">Hours:</p>
+            <li className="pt-2 space-y-1">
+              <p className="font-medium text-foreground">Hours:</p>
               <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
               <p>Sun: Closed</p>
             </li>
           </ul>
+
+          <div className="mt-6 space-y-2 text-sm text-muted-foreground">
+            <p className="font-semibold text-foreground">Website Operator</p>
+            <p className="font-medium text-foreground">SHOPCANARY s.r.o.</p>
+            <p>Rybná 716/24, Staré Město, 110 00 Praha 1, Czech Republic</p>
+            <p>Company Registration No.: C 398373, Municipal Court in Prague</p>
+          </div>
         </div>
       </div>
+
       <div className="border-t">
-        <div className="container py-4 px-4 md:px-6 text-center text-sm text-muted-foreground">
-          &copy; {currentYear} {COMPANY_NAME}. All Rights Reserved.
+        <div className="container py-6 px-4 md:px-6 space-y-3 text-center text-sm text-muted-foreground">
+          <p>
+            © {currentYear} {COMPANY_NAME}. All Rights Reserved.
+          </p>
+          <p className="text-xs leading-relaxed text-muted-foreground/90">
+            Disclaimer: greenshield.com is a free service to assist homeowners
+            in connecting with local service providers. All
+            contractors/providers are independent and greenshield.com does not
+            warrant or guarantee any work performed. It is the responsibility of
+            the homeowner to verify that the hired contractor furnishes the
+            necessary license and insurance required for the work being
+            performed. All persons depicted in a photo or video are actors or
+            models and not contractors listed on this site
+          </p>
         </div>
       </div>
     </footer>
